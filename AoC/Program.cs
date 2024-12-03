@@ -15,10 +15,13 @@ class Program
             Console.Error.WriteLine("Please select an exercise to solve");
             return;
         }
-        var toSolve = args[0];
-        var debug = false;
-        var testingInput = false;
+
+        var arguments = args.ToList();
+        var toSolve = arguments[0];
+        var debug = arguments.Contains("-d");
+        var testingInput = arguments.Contains("-t");
         var part = 1;
+        
         if (args.Length > 1 && int.TryParse(args[1], out var partId))
         {
             if (partId is < 1 or > 2)
@@ -30,15 +33,7 @@ class Program
                 part = partId;
             }
         }
-        if (args.Length > 2 && bool.TryParse(args[2], out var withDebug))
-        {
-            debug = withDebug;
-        }
-
-        if (args.Length > 3 && bool.TryParse(args[3], out var withTesting))
-        {
-            testingInput = withTesting;
-        }
+        
         if (int.TryParse(toSolve, out var result) && result is > 0 and < 25)
         {
             var input = GetInput(result, testingInput);

@@ -53,7 +53,7 @@ public class Day1 : ISolver<long>
         var lists = new List<PriorityQueue<long, long>>();
         var l1 = new PriorityQueue<long, long>();
         var l2 = new PriorityQueue<long, long>();
-        var rows = input.Split("\r\n");
+        var rows = input.Split(Environment.NewLine);
         foreach (var row in rows)
         {
             var numbers = Regex.Split(row, @"\s+").Where(s => s != string.Empty).Select(long.Parse).ToArray();
@@ -68,7 +68,7 @@ public class Day1 : ISolver<long>
 
     private static Dictionary<long, long> GetOccurences(string input)
     {
-        var rows = input.Split("\r\n");
+        var rows = input.Split(Environment.NewLine);
         var occurrences = new Dictionary<long, long>();
         foreach (var row in rows)
         {
@@ -84,7 +84,7 @@ public class Day1 : ISolver<long>
 
     private static long[] GetItemList(string input)
     {
-        var rows = input.Split("\r\n");
+        var rows = input.Split(Environment.NewLine);
         var numbers = new long[rows.Length];
         for (int i = 0; i < rows.Length; i++)
         {
