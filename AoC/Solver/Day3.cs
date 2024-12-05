@@ -83,7 +83,10 @@ public class Day3 : ISolver<long>
             } 
             else if (dontPos > dosPos)
             {
-                dosIdx++;
+                while (dontIdx < dosMatches.Count && dosMatches[dosIdx].Index < dontPos)
+                {
+                    dosIdx++;
+                }
             }
             
             total += res;
