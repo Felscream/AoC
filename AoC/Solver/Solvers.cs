@@ -8,48 +8,32 @@ public class Solvers
     {
         public void Run(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day1();
             var solution = solver.Solve(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
 
         public void Run2(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day1();
             var solution = solver.Solve2(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
     }
     public class Day2Solution
     {
         public void Run(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day2();
             var solution = solver.Solve(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
 
         public void Run2(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day2();
             var solution = solver.Solve2(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
     }
     
@@ -57,24 +41,16 @@ public class Solvers
     {
         public void Run(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day3();
             var solution = solver.Solve(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
 
         public void Run2(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day3();
             var solution = solver.Solve2(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
     }
     
@@ -82,24 +58,16 @@ public class Solvers
     {
         public void Run(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day4();
             var solution = solver.Solve(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
 
         public void Run2(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day4();
             var solution = solver.Solve2(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
     }
     
@@ -107,24 +75,16 @@ public class Solvers
     {
         public void Run(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day5();
             var solution = solver.Solve(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
 
         public void Run2(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day5();
             var solution = solver.Solve2(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
     }
     
@@ -132,24 +92,33 @@ public class Solvers
     {
         public void Run(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day6();
             var solution = solver.Solve(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
 
         public void Run2(string input, bool debug)
         {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var solver = new Day6();
             var solution = solver.Solve2(input, debug);
             Console.WriteLine("Result "+solution);
-            stopwatch.Stop();
-            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
+        }
+    }
+    
+    public class Day7Solution
+    {
+        public void Run(string input, bool debug)
+        {
+            var solver = new Day7();
+            var solution = solver.Solve(input, debug);
+            Console.WriteLine("Result "+solution);
+        }
+
+        public void Run2(string input, bool debug)
+        {
+            var solver = new Day7();
+            var solution = solver.Solve2(input, debug);
+            Console.WriteLine("Result "+solution);
         }
     }
 }

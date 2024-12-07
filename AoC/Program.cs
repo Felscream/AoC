@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Diagnostics;
 using System.Dynamic;
 using System.Reflection;
 using AoC.Solver;
@@ -41,7 +42,11 @@ class Program
             object[] parameters = [input, debug];
             var methodName = part == 1 ? "Run" : "Run2";
             
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
             solutionInstance?.GetType().GetMethod(methodName)?.Invoke(solutionInstance, parameters);
+            stopwatch.Stop();
+            Console.WriteLine($"Elapsed time: {stopwatch.Elapsed}");
         }
         else
         {

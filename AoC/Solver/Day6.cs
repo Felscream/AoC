@@ -75,7 +75,7 @@ public class Day6 : ISolver<long>
         }
         while (nextTile.X > -1 && nextTile.X < width && nextTile.Y > -1 && nextTile.Y < height)
         {
-            map[pos.Y][pos.X] = 'X';
+            //map[pos.Y][pos.X] = 'X';
             
             if (map[nextTile.Y][nextTile.X] != '#')
             {
@@ -89,6 +89,28 @@ public class Day6 : ISolver<long>
                 }
                 
                 pos = nextTile;
+                switch(direction)
+                {
+                    case { X: 0, Y: -1 }:
+                    case { X: 0, Y: 1 }:
+                        map[pos.Y][pos.X] = map[pos.Y][pos.X] switch
+                        {
+                            '-' => '+',
+                            '.' => '|',
+                            _ => map[pos.Y][pos.X]
+                        };
+
+                        break;
+                    case { X: 1, Y: 0 }:
+                    case { X: -1, Y: 0 }:
+                        map[pos.Y][pos.X] = map[pos.Y][pos.X] switch
+                        {
+                            '|' => '+',
+                            '.' => '-',
+                            _ => map[pos.Y][pos.X]
+                        };
+                        break;
+                };
             }
             else
             {
@@ -97,7 +119,8 @@ public class Day6 : ISolver<long>
             }
             nextTile = pos + direction;
         }
-        map[pos.Y][pos.X] = 'X';
+        //map[pos.Y][pos.X] = 'X';
+        
         if (debug)
         {
             Console.WriteLine("");
